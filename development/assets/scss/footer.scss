@@ -1,0 +1,139 @@
+.footer {
+	background-color: #F8F8F8;
+
+	&__wrap{
+		padding-right: 150px;
+		padding-left: 150px;
+		padding-top: 63.5px;
+		padding-bottom: 100px;
+		display: flex;
+  	flex-direction: row;
+  	align-items: stretch;
+  	justify-content: space-between;
+
+	 	@include mq(tablet-xl, max) {
+  		flex-direction: column-reverse;
+			justify-content: center;
+			align-items: stretch;
+			padding-right: 50px;
+			padding-left: 50px;
+  } 
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		@include mq(tablet-xl, max) {
+  		align-items: center;
+			margin-top: 50px;
+  } 
+	
+	}
+
+	&__logo{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	&__logo-img {
+		margin-right: 10px;
+	}
+
+	&__logo-text {
+		color: #0B132A;
+		@include font-size(20);
+		font-weight: 500;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	&__text {
+		color: $paragraph-color;
+		@include font-size(16);
+		max-width: 340px;
+		margin-top: 20px;
+	}
+		
+	&__social-shared{
+		margin-top: 30px;
+	}
+
+	&__icon-link{
+			text-decoration: none;
+		}
+
+	&__icon{
+	margin-right: 18px;
+	background-color: $button-color;
+	border-radius: 50%;
+
+  box-shadow: 0 10px 5px rgb(238, 237, 237);
+
+}
+
+&__copyright{
+	margin-top: 30px;
+	color: $footer-copyright-color;
+}
+
+	&__box{
+		display: flex;
+  	flex-direction: row;
+  	align-items:flex-start;
+  	justify-content: space-between;
+		@include mq(tablet-xl, max) {
+			justify-content: space-around;	
+  }
+	@include mq(tablet, max) {
+  		flex-direction: column;
+			align-items: center;
+  }
+	}
+
+	&__nav-box{
+		@include mq(tablet-xl, max) {
+  		margin-top: 20px;
+  }
+	@include mq(tablet, max) {
+  		min-width: 130px;
+  }
+
+		&--center{
+		margin-left: 100px;
+		margin-right:100px;
+
+		@include mq(tablet, max) {
+			margin-left: 0;
+			margin-right: 0;
+  }
+		}
+	}
+
+
+  &__nav-title{
+		margin-top: 0px;
+		margin-bottom: 15px;
+		color: $header-color;
+		@include font-size(18);
+	}
+
+	&__links{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	&__link{
+	  color: $paragraph-color; 
+		text-decoration: none;
+		margin: 5px 0;
+	}
+	
+}

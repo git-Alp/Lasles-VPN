@@ -1,0 +1,66 @@
+.location {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__title {
+		text-align: center;
+		font-weight: 500;
+	}
+	&__info {
+		color: $paragraph-color;
+		padding: 10px;
+	}
+	&__map {
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+
+		@include mq(desktop ,max){
+			width: 500px;
+			height: 500px;
+		}
+
+		@include mq("tablet-xl", max) {
+			width: 300px;
+			height: 300px;
+		}
+	}
+	&__img{
+
+		@include mq("desktop", max) {
+			width: 600px;
+		}
+		@include mq("tablet", max) {
+			width: 300px;
+		}
+	}
+}
+
+
+.partners-logos {
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+	justify-content: center;
+	align-items: center;
+	&__logo {
+		padding: 15px;
+		@include mq("desktop",max){
+		width: 150px;
+		@include mq("tablet-xl", max) {
+		width: 130px;
+	}
+		@include mq("tablet", max) {
+		width: 65px;
+		padding: 0px;
+	}
+	@include mq("tablet", max) {
+		width: 50px;
+		padding: 0px;
+	}
+	}
+
+	}
+
+}

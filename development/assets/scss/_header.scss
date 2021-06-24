@@ -1,0 +1,102 @@
+.navbar{
+	padding-right: 150px;
+	padding-left: 150px;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	@include mq(tablet-xl, max) {
+    flex-direction: column;
+  }
+	
+	@include mq("tablet", max) {
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+
+	&__logo{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		text-decoration: none;
+		margin-right: 10px;
+
+		@include mq(tablet-xl, max) {
+    margin-bottom: 10px;
+  }
+	}
+
+	&__logo-img{
+		margin-right: 10px;
+	}
+
+	&__logo-text{
+		font-weight: 500;
+		@include font-size(20);
+		color: $header-color;
+	
+	}
+
+	&__menu{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 450px;
+
+		@include mq(tablet-xl, max) {
+    margin-bottom: 10px;
+  }
+
+		@include mq(tablet, max) {
+    flex-direction: column;
+		width: auto;
+  }
+	}
+
+	&__menu-item {
+		font-weight: normal;
+		@include font-size(16);
+		color:$paragraph-color;
+		text-decoration: none;
+	}
+
+	&__signs{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 240px;
+	}
+
+	&__sign-in {
+		font-weight: 500;
+		color: $header-color;
+		text-decoration: none;
+		margin-left: 10px;
+	}
+
+
+	&__sign-up{
+		cursor: pointer;
+		padding: 13px 40px;
+		background: white;
+		font-family: Rubik;
+		font-weight: 500;
+		color: $navbar-signup-color;
+		border: 1px solid $navbar-signup-color;
+		border-radius: 50px;
+		text-decoration: none;
+
+		&:hover{
+			background-color: $navbar-signup-color;
+			color: white;
+		}
+	}
+
+
+
+}
